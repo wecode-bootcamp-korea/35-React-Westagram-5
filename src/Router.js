@@ -23,7 +23,7 @@ import SdkMain from './pages/simdongkyu/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav/> 
+      <Nav />
       <Routes>
         <Route path="/login-kimsujeong" element={<KsjLogin />} />
         <Route path="/main-kimsujeong" element={<KsjMain />} />
