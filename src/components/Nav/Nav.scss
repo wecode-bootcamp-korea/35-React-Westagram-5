@@ -1,11 +1,126 @@
-// .Navigater {
-//   position: fixed;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   top:0;
-//   color: #fff;
-//   width: 100vw;
-//   height: 100px;
-//   background-color: #333;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&display=swap'); /*글씨체가 적용 안되어서 다시 적용해 주었다.*/
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$borderColor: #dbdbdb;
+$backgroundColor: #fff;
+
+.navTop {
+  /* vertical-align: baseline; vertical-align 인라인 요소의 수직정렬 baseline: 부모요소의 기준선(baseline)에 맞춤ㄴ */
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 55px;
+  width: 100%;
+  border: 1px solid $borderColor;
+  background-color: $backgroundColor;
+  z-index: 999;
+  margin-top: 0px;
+  .topContainer {
+    @include flex-center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+}
+
+.mainLogo {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  justify-content: flex-start;
+  display: flex;
+  font-size: 25px;
+  margin: 0 230px;
+}
+.searchBar {
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  background-color: #efefef;
+  border: none;
+  border-radius: 8px;
+  width: 268px;
+  min-width: 200px;
+  height: 36px;
+}
+.magnify {
+  margin-left: 12px;
+}
+.searchTxt {
+  background-color: #efefef;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 11px;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: #7d8080;
+}
+
+.iconContainer {
+  @include flex-center;
+  flex-direction: row;
+  flex: 1 0 127px;
+  flex-wrap: wrap;
+  min-width: 650px;
+  position: relative;
+  align-items: center;
+}
+.homeIcon {
+  display: block;
+  position: relative;
+  font-size: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dmIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.addIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.findIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.heartIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mainUser {
+  height: 24px;
+  width: 24px;
+  border-radius: 70%;
+  margin-left: 22px;
+}
