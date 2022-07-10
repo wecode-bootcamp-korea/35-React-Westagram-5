@@ -9,12 +9,7 @@
 $borderColor: #dbdbdb;
 $backgroundColor: #fff;
 
-.main {
-  display: flex;
-  align-items: stretch; /*콘텐츠 아이템의 내부 상하관계 정렬 상태 설정*/
-  position: relative;
-  border: 0 solid black; /*요소를 일반적인 문서 흐름에 따라 배치하고, 자기 자신을 기준으로 top, right, bottom, left의 값에 따라 오프셋을 적용*/
-}
+
 
 .navTop {
   /* vertical-align: baseline; vertical-align 인라인 요소의 수직정렬 baseline: 부모요소의 기준선(baseline)에 맞춤ㄴ */
@@ -131,6 +126,7 @@ $backgroundColor: #fff;
   border-radius: 70%;
   margin-left: 22px;
 }
+<<<<<<< HEAD
 
 .userProfile {
   display: flex;
@@ -142,3 +138,5 @@ $backgroundColor: #fff;
     cursor: pointer;
   }
 }
+=======
+>>>>>>> 88950db09db03e4d115f4ef911b16eaea8cb1076
