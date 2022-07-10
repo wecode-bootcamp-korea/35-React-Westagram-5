@@ -1,4 +1,326 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@charset "utf-8";
+@import '../../../styles/reset.scss';
+@import '../../../styles/common.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Gothic+A1:wght@400;600;900&display=swap');
+
+
+$bg-color:rgb(249, 249, 249);
+$bgbox-color:#fff;
+$point-color: #6eacf5;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  background-color:$bgbox-color;
+  z-index: 1;
+
+  .homeNavBox {
+    @include flex-center;
+    width: 100vw;
+    height: 80px;
+
+    h2.logoSmall {
+      margin: 0 250px 0 40px;
+      color: black;
+      font-family: 'Berkshire Swash', cursive, serif;
+      font-size: 1.7em;
+    }
+
+
+    div.searchBar {
+      position: relative;
+      margin-right: 100px;
+
+      .searchIcon {
+        position: absolute;
+        top: 5px;
+        left: 6px;
+        width: 20px;
+        margin: 0 3px;
+      }
+
+      .inputSearch {
+        width: 200px;
+        height: 30px;
+        padding-left: 30px;
+        background-color: $bg-color;
+        border-radius: 5px;
+        border: 1px solid #eee;
+      }
+
+    }
+
+    div.navIcon {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+
+      img {
+        width: 30px;
+        margin-right: 15px;
+      }
+
+      #navProfileIcon {
+        width: 30px;
+        border-radius: 50%;
+        border: 2px solid #e1e1e1;
+      }
+
+    }
+
+  }
+
+}
+
+/*main start*/
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: $bg-color;
+
+    /* section start */
+
+  section.feedScrollArea {
+    display: flex;
+    flex-direction: column;
+
+    article.feed {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 40px;
+      margin-right: 30px;
+      width: 480px;
+      background-color: $bgbox-color;
+      border: 1px solid #e1e1e1;
+      border-radius: 10px;
+
+      div.feedNav {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 15px 10px;
+
+        .feedNavIconName {
+          @include flex-center;
+
+          #feedProfileIcon {
+            width: 30px;
+            border-radius: 50%;
+            border: 2px solid #e1e1e1;
+          }
+
+          .feedProfileName {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 5px;
+          }
+
+        }
+
+        .feedPlusIcon {
+          margin-left: 280px;
+          width: 30px;
+          margin-right: 15px;
+        }
+
+      }
+
+      div.feedImageSection {
+        width: 480px;
+        height: 500px;
+        overflow: hidden;
+        border-top: 1px solid #e1e1e1;
+        position: relative;
+
+        #feedImg {
+          width: 480px;
+          position: absolute;
+          height: auto;
+          transform: translate(0%, -20%);
+        }
+      }
+
+      div.feedImageResponse {
+        @include flex-space-between;
+        margin: 10px;
+
+        .feedImageResponseInner {
+          display: flex;
+
+          img {
+            height: 30px;
+            width: 30px;
+            margin-right: 15px;
+          }
+        }
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+
+      }
+
+      article.commentArea {
+        margin: 0 15px;
+
+        .heartBeatPeople {
+          margin-bottom: 5px;
+
+          .userName {
+            font-weight: 600;
+          }
+
+        }
+
+        .newComment {
+          margin-bottom: 10px;
+        }
+
+      }
+
+      div.commentBox {
+        border-top: 1px solid #e1e1e1;
+
+        .inputCommentsBox {
+          @include flex-space-between;
+          margin: 20px 15px;
+          padding-left: 2px;
+
+          #commentInput {
+            width: 400px;
+            border: 0px solid;
+            outline: none;
+            font-size: 1em;
+          }
+
+          #commentSubmit {
+            cursor: pointer;
+            font-weight: 600;
+            color: #e1e1e1;
+            font-size: 1em;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+    /*section end*/
+
+
+  /* aside start */
+
+  aside {
+    width: 320px;
+
+    li.asideMyProfileBox {
+      @include flex-space-between;
+      align-items: center;
+      margin-top: 60px;
+
+
+      .asideMyProfile {
+        display: flex;
+        align-items: center;
+
+        .asideMyProfileImg {
+          margin-right: 10px;
+
+          img {
+            width: 70px;
+            border-radius: 50%;
+            border: 5px solid #e1e1e1;
+          }
+        }
+
+        .asideFeedMyProfileName {
+          font-size: 1.2em;
+          font-weight: 600;
+          margin-left: 5px;
+        }
+
+        .asideFeedMyProfileSubName {
+          font-size: 0.9em;
+          font-weight: 300;
+          color: #777;
+        }
+      }
+
+      .asideMyIdRetrun {
+        font-size: 0.9em;
+        color: $point-color;
+      }
+
+    }
+
+    li.recommandListTitle {
+      @include flex-space-between;
+      margin: 20px 0;
+    }
+
+    li.recommandPeopleBox {
+      @include flex-space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      div.recommandPeopleList {
+        display: flex;
+
+        .recommendProfileIcon {
+
+          img {
+            width: 40px;
+            border-radius: 50%;
+            border: 2px solid #e1e1e1;
+          }
+
+        }
+
+        .recommendProfileName {
+          font-size: 1em;
+          font-weight: 600;
+          margin-left: 10px;
+        }
+
+        .recommendProfileSubName {
+          font-weight: 300;
+          opacity: 0.8;
+        }
+
+      }
+
+      div.recommendPeopleFollow {
+        font-size: 0.9em;
+        color: $point-color;
+      }
+
+    }
+
+  }
+
+  /*aside end*/
+
+}
+
+/*main end*/
