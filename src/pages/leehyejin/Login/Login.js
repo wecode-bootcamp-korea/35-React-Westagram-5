@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
-import '../../styles/common.scss';
+// import '../../styles/common.scss';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,14 +11,14 @@ const Login = () => {
   };
 
   const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
+  const [pwd, setPwd] = useState('');
 
   const handleIdInput = e => {
     setId(e.target.value);
   };
 
   const handlePwdInput = e => {
-    setPw(e.target.value);
+    setPwd(e.target.value);
   };
   return (
     <div className="wrapper">
@@ -31,6 +31,8 @@ const Login = () => {
               className="idInput"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
+              value={id}
+              onChange={handleIdInput}
             />
             <input className="pwInput" type="password" placeholder="비밀번호" />
             <input
@@ -38,6 +40,7 @@ const Login = () => {
               type="submit"
               value="로그인"
               onClick={goToMain}
+              disabled={id.includes('@') && pwd.length > 4 ? false : true}
             />
           </form>
         </div>
