@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   const goToMain = () => {
-    Navigate('/Main');
+    Navigate('/main-kimsujeong');
   };
 
   const handleIdInput = e => {
@@ -33,14 +33,14 @@ const Login = () => {
             <input
               type="text"
               id="userId"
-              value={userId}
-              onChange={handleIdInput} // 사용자가 타자로 치는 값
+              // value={userId}
+              onChange={handleIdInput} // 사용자가 타자로 치는 값. 뭔가 변화 되는 이벤트를 감지
               onKeyUp={handleBtn}
               placeholder="전화번호, 사용자 또는 이메일"
             />
             <input
               type="password"
-              value={userPw}
+              // value={userPw}
               onChange={e => setPw(e.target.value)}
               id="userPw"
               onKeyUp={handleBtn}
