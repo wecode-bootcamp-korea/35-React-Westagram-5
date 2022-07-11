@@ -20,8 +20,7 @@ const Login = () => {
       ? setDisabled(false)
       : setDisabled(true);
   };
-  //  console.log(loginId);
-  //  console.log(loginPW);
+
   return (
     <div>
       <main className="loginPage">

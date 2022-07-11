@@ -211,10 +211,16 @@ main {
             font-size: 1em;
           }
 
-          #commentSubmit {
+          .commentSubmit {
             cursor: pointer;
             font-weight: 600;
             color: #e1e1e1;
+            font-size: 1em;
+          }
+          .commentSubmit_pass {
+            cursor: pointer;
+            font-weight: 600;
+            color: $point-color;
             font-size: 1em;
           }
 
