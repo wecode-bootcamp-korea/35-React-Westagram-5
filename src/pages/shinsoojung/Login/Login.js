@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
@@ -77,7 +77,7 @@ const Login = () => {
           </div>
           <form className="joinMember">
             <button className="goMembershipJoin">
-              계정이 없으신가요? <Link to="/main-shinsoojung">가입하기</Link>
+              계정이 없으신가요? <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
             </button>
           </form>
         </div>

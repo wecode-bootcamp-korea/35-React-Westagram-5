@@ -1,28 +1,9 @@
 @charset "utf-8";
 @import '../../../styles/reset.scss';
 @import '../../../styles/common.scss';
+@import '../../../styles/variable.scss';
 
 /*login start*/
-
-
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Gothic+A1:wght@400;600;900&display=swap');
-
-
-$bg-color:rgb(249, 249, 249);
-$bgbox-color:#fff;
-$point-color: #6eacf5;
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
 
 
 body {
