@@ -1,4 +1,501 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&display=swap'); /*글씨체가 적용 안되어서 다시 적용해 주었다.*/
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$borderColor: #dbdbdb;
+$backgroundColor: #fff;
+
+.main {
+  display: flex;
+  align-items: stretch; /*콘텐츠 아이템의 내부 상하관계 정렬 상태 설정*/
+  position: relative;
+  border: 0 solid black; /*요소를 일반적인 문서 흐름에 따라 배치하고, 자기 자신을 기준으로 top, right, bottom, left의 값에 따라 오프셋을 적용*/
+}
+
+.navTop {
+  /* vertical-align: baseline; vertical-align 인라인 요소의 수직정렬 baseline: 부모요소의 기준선(baseline)에 맞춤ㄴ */
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 55px;
+  width: 100%;
+  border: 1px solid $borderColor;
+  background-color: $backgroundColor;
+  z-index: 999;
+  margin-top: 0px;
+  .topContainer {
+    @include flex-center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+}
+
+.mainLogo {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  justify-content: flex-start;
+  display: flex;
+  font-size: 25px;
+  margin: 0 230px;
+}
+.searchBar {
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  background-color: #efefef;
+  border: none;
+  border-radius: 8px;
+  width: 268px;
+  min-width: 200px;
+  height: 36px;
+}
+.magnify {
+  margin-left: 12px;
+}
+.searchTxt {
+  background-color: #efefef;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 11px;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: #7d8080;
+}
+
+.iconContainer {
+  @include flex-center;
+  flex-direction: row;
+  flex: 1 0 127px;
+  flex-wrap: wrap;
+  min-width: 650px;
+  position: relative;
+  align-items: center;
+}
+.homeIcon {
+  display: block;
+  position: relative;
+  font-size: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dmIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.addIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.findIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.heartIcon {
+  display: flex;
+  position: relative;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mainUser {
+  height: 24px;
+  width: 24px;
+  border-radius: 70%;
+  margin-left: 22px;
+}
+
+.userProfile {
+  display: flex;
+  position: relative;
+  height: 24;
+  width: 24;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.storyContainer {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  min-width: 470px;
+}
+.stories {
+  display: flex;
+  position: relative;
+  width: 520px;
+  min-width: 520px;
+  height: 105px;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  margin: 26px 0 0 6px;
+  background-color: $backgroundColor;
+}
+.storyWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 80%;
+}
+.strbox {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.id1 {
+  display: block;
+  font-weight: 200;
+  font-size: 8px;
+  text-align: center;
+}
+
+.feed {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  width: 520px;
+  height: 750px;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  margin-top: 150px;
+  margin-left: 7px;
+  background-color: $backgroundColor;
+}
+.feedHeader {
+  width: 100%;
+  height: 52px;
+  margin-top: 0;
+  border-bottom: 1px solid $borderColor;
+}
+
+.feedContainer {
+  width: 500px;
+  height: 40px;
+  margin: 6px auto;
+  vertical-align: middle;
+}
+
+.feedHeaderImg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f35369;
+  border-radius: 70%;
+}
+
+.feedUser {
+  display: inline-block;
+  position: absolute;
+  top: 2%;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.moreIcon {
+  position: absolute;
+  justify-content: center;
+  right: 10px;
+  top: 2%;
+}
+
+.feedImg {
+  height: 500px;
+}
+
+.footerIcon {
+  display: flex;
+  width: 100px;
+  margin: 2% 0 2px 9px;
+  justify-content: space-between;
+  .bookmarkIcon {
+    position: absolute;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.cmtLikeContainer {
+  width: 490px;
+  height: 30px;
+  line-height: 30px; /*text를 세로 중앙 배치하려면, height 값을 매기고 line-height값을 설정하면 된다.*/
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.cmtContainer {
+  width: 490px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.cmtTime {
+  position: relative;
+  top: -2px;
+  font-size: 10px;
+  color: grey;
+}
+
+.addCmt {
+  position: absolute;
+  bottom: 4px;
+  width: 500px;
+  height: 55px;
+  border-top: 1px solid $borderColor;
+}
+
+.comment {
+  height: 30px;
+  margin-top: 2%;
+}
+.emojiIcon {
+  position: relative;
+  bottom: -5px;
+}
+
+.commtext {
+  width: 400px;
+  margin-left: 5px;
+  line-height: 35px;
+  font-size: 14px;
+  border: none;
+  resize: none; /*크기 조절 없애기*/
+  &:focus {
+    /*클릭 시 테두리 없애기*/
+    outline: none;
+  }
+}
+
+.commbtn {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: $backgroundColor;
+  border: none;
+  color: #b3dffc;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/*                  mainRight                   */
+.mainRight {
+  position: fixed;
+  display: flex;
+  width: 350px;
+  height: 350px;
+  margin-top: 24px;
+  margin-left: 550px;
+}
+
+.mainRightTop {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 70px;
+}
+
+.mainProfile {
+  display: flex;
+}
+
+.mainProfileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  margin: 2%;
+}
+
+.user {
+  display: flex;
+  justify-content: center; /* span태그 수직 정렬*/
+  flex-direction: column;
+}
+.username {
+  font-weight: lighter;
+  font-size: 12px;
+  color: grey;
+}
+.btnContainer {
+  display: flex;
+  width: 165px;
+  height: 100%;
+  justify-content: flex-end;
+  vertical-align: middle;
+  align-items: center; /*display flex 일때 align-items center하면 수직 정렬됨*/
+}
+
+.userChange {
+  background-color: transparent;
+  color: #0095f6;
+  width: 40px;
+  height: 30px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.userRecommend {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 280px;
+}
+.recommendTitle {
+  width: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(142, 142, 142);
+}
+.recommendDetail {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 150px;
+}
+.info {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  height: 100px;
+}
+
+.recommendList {
+  display: flex;
+  flex-direction: column;
+}
+
+//common.scss
+body {
+  height: 100vh;
+  margin: 50px 0px;
+  padding: 0;
+}
+.textbox {
+  width: 490px;
+  margin-bottom: 4px;
+  list-style-type: none;
+  font-size: 14px;
+
+  right: 17px;
+}
+.cmtUser {
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  left: 10px;
+}
+.cmtUserCmt {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.strProfile1 {
+  border: 2px solid #f35369;
+  border-radius: 70%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+
+.infoTxt {
+  font-size: 12px;
+  color: rgb(199, 199, 199);
+}
+
+.recommendInfo {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendUser {
+  width: 45px;
+  height: 45px;
+  border-radius: 70%;
+  vertical-align: middle;
+  position: absolute;
+  transform: translateX(20%) translateY(15%);
+}
+
+.userAcnt {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.userAcntDetail {
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+}
+
+.acntDetail {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  margin-left: 20%;
+  justify-content: center;
+}
+
+.acntFollow {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095f6;
+  width: 45px;
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  right: 7px;
 }
