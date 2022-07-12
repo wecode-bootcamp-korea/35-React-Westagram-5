@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('/main');
+    navigate('/main-leehyejin');
   };
 
   const [id, setId] = useState('');

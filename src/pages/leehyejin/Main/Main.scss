@@ -146,7 +146,7 @@ $backgroundColor: #fff;
 .storyContainer {
   display: flex;
   position: relative;
-  margin: 0 auto;
+  margin: 80px auto;
   width: 60%;
   min-width: 470px;
 }
@@ -317,6 +317,8 @@ $backgroundColor: #fff;
   color: #b3dffc;
   font-size: 14px;
   font-weight: bold;
+  margin-left: 11px;
+  text-align: center;
   &:hover {
     cursor: pointer;
   }
@@ -420,7 +422,7 @@ body {
 .textbox {
   width: 490px;
   margin-bottom: 4px;
-  list-style-type: none;
+  // list-style-type: none;
   font-size: 14px;
 
   right: 17px;
@@ -432,6 +434,7 @@ body {
   left: 10px;
 }
 .cmtUserCmt {
+  margin-left: 50px;
   font-size: 13px;
   font-weight: 400;
 }
