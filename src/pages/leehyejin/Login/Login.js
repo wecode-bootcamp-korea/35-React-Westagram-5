@@ -20,6 +20,10 @@ const Login = () => {
   const handlePwdInput = e => {
     setPwd(e.target.value);
   };
+
+  // const handlePwdInput = e => {
+  //   setPwd(e.target.value);
+  // };
   return (
     <div className="wrapper">
       <div className="container">
@@ -34,7 +38,13 @@ const Login = () => {
               value={id}
               onChange={handleIdInput}
             />
-            <input className="pwInput" type="password" placeholder="비밀번호" />
+            <input
+              className="pwInput"
+              type="password"
+              placeholder="비밀번호"
+              value={pwd}
+              onChange={handlePwdInput}
+            />
             <input
               className="btnSubmit"
               type="submit"
