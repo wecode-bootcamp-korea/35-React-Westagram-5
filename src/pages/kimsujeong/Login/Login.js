@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import './Login.scss';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const Navigate = useNavigate();
+  // const Navigate = useNavigate();
   const [userId, setId] = useState('');
   const [userPw, setPw] = useState('');
   const [disable, setDisable] = useState('true');
@@ -13,11 +13,25 @@ const Login = () => {
       ? setDisable(false)
       : setDisable(true);
   };
-
+  // Navigate('/main-kimsujeong');
   const goToMain = () => {
-    Navigate('/main-kimsujeong');
+    fetch('http://10.58.3.189:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: userId,
+        password: userPw,
+      }),
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.access_token) {
+          localStorage.setItem('login-token', response.access_token);
+          //login-token은 내가 정한 값, response. 뒤, access_token은 백앤드가 정한 키값)
+        } else {
+          console.log('err');
+        }
+      });
   };
-
   const handleIdInput = e => {
     setId(e.target.value);
   };

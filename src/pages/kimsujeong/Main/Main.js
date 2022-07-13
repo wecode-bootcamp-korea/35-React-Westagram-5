@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import './Main.scss';
+import React, { useEffect, useState } from 'react';
 import Comment from '../../../components/comment/Comment';
-// import Data from '../../../components/comment/data.json'
+import './Main.scss';
 
 const Main = () => {
   const [comment, setComment] = useState('');
-  // const [userId, setUserId] = useState('userId');
   const [initial, setInitial] = useState([]);
 
   const submit = e => {
@@ -15,6 +13,11 @@ const Main = () => {
     });
     setComment('');
   };
+
+  // useEffect(()=>{
+  //   const[inputData,setInputData]= useState;
+  //   fetch().then().then();
+  // },[]);
 
   return (
     <>
