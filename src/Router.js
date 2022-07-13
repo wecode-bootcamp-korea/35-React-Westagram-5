@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
-import Nav from './components/Nav/Nav';
 
 import KsjLogin from './pages/kimsujeong/Login/Login';
 import KsjMain from './pages/kimsujeong/Main/Main';
@@ -23,7 +22,6 @@ import SdkMain from './pages/simdongkyu/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav/> 
       <Routes>
         <Route path="/login-kimsujeong" element={<KsjLogin />} />
         <Route path="/main-kimsujeong" element={<KsjMain />} />

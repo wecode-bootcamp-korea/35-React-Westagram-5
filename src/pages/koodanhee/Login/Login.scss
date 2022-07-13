@@ -1,4 +1,84 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.body-box {
+  display: flex;
+  justify-content: center; /*X축*/
+  align-items: center; /*Y축*/
+  margin-top: 150px;
+}
+
+.parentBox {
+  border: 1px solid rgb(192, 189, 189);
+  border-radius: 10px;
+  height: 550px;
+  width: 400px;
+}
+
+.westagram {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px;
+  border: 1px solid RGB(200, 200, 200);
+  border-radius: 10px;
+  outline: none;
+}
+
+#loginId,
+#loginPw {
+  height: 30px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.login-box {
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.findPW {
+  padding: 50px;
+  font-weight: bold;
+  font-size: medium;
+  text-decoration: none;
+  color: rgb(24, 24, 151);
+}
+
+.button-on {
+  background-color: RGB(1, 149, 247);
+  color: white;
+  // opacity: 0.3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 30px;
+  margin-bottom: 100px;
+}
+
+.button-off {
+  background-color: RGB(1, 149, 247);
+  color: white;
+  opacity: 0.3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 30px;
+  margin-bottom: 100px;
+}
+
+.LoginBox {
+  color: white;
+  font-weight: 500;
+  font-size: medium;
+  width: 300px;
 }
