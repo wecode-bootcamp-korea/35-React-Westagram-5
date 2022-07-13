@@ -124,3 +124,14 @@ $backgroundColor: #fff;
   border-radius: 70%;
   margin-left: 22px;
 }
+
+.userProfile {
+  display: flex;
+  position: relative;
+  height: 24;
+  width: 24;
+  margin-left: 22px;
+  &:hover {
+    cursor: pointer;
+  }
+}

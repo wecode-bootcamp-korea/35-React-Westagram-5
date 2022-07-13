@@ -1,4 +1,188 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&display=swap'); /*글씨체가 적용 안되어서 다시 적용해 주었다.*/
+
+$border-color: #dbdbdb;
+$background-color: #fff;
+$input-color: #fafafa;
+
+.container {
+  background-color: $background-color;
+  display: flex;
+  width: 450px;
+  height: 590px;
+  border: 1px solid $border-color;
+  margin: 100px auto;
+  align-items: center;
+  flex-direction: column;
+  .logo {
+    width: 100%;
+    height: 20%;
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 36px 50% 0 50%;
+    font-size: 70px;
+  }
+
+  .input {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 24px 0 40px 6px;
+    .idInput {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      background: $input-color;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      width: 80%;
+      height: 45px;
+      margin-left: 10%;
+      padding: 9px 0 7px 8px;
+      font-size: 16px;
+      &:focus {
+        border: 1px solid #787777;
+        outline: none;
+      }
+    }
+    .pwInput {
+      position: relative;
+      background: $input-color;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      width: 80%;
+      height: 45px;
+      margin: 4% 0 0 10%;
+      padding: 9px 0 7px 8px;
+      font-size: 16px;
+      &:focus {
+        border: 1px solid #787777;
+        outline: none;
+      }
+    }
+  }
+}
+
+.btnSubmit {
+  display: flex;
+  position: relative;
+  background: #0095f6;
+  color: $background-color;
+  border: 1px solid transparent; /*transparant: border에 투명도 적용*/
+  border-radius: 3px;
+  width: 80%;
+  height: 45px;
+  margin: 20% 0 0 10%;
+  padding: 7px 0 8px 8px;
+  font-size: 22px;
+  font-weight: bold; /*글씨체 두껍게*/
+  text-align: center;
+  /* font:inherit;  inherit은 부모 요소를 따른다는 것. font-size를 변경해도 바뀌지 않아 inherit을 지웠더니 크기 조절이 가능했다*/
+  opacity: 1;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  cursor: pointer;
+  &:disabled {
+    background: #b2dffc;
+    cursor: default;
+  }
+}
+
+.footer {
+  width: 100%;
+  position: relative; /*relative는 정상위치에 대해서 상대적으로 위치한다.*/
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: #4c6caf;
+    font-weight: bold;
+  }
+}
+
+//common
+.textbox {
+  width: 490px;
+  margin-bottom: 4px;
+  list-style-type: none;
+  font-size: 14px;
+
+  right: 17px;
+}
+.cmtUser {
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  left: 10px;
+}
+.cmtUserCmt {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.strProfile1 {
+  border: 2px solid #f35369;
+  border-radius: 70%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+
+.infoTxt {
+  font-size: 12px;
+  color: rgb(199, 199, 199);
+}
+
+.recommendInfo {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendUser {
+  width: 45px;
+  height: 45px;
+  border-radius: 70%;
+  vertical-align: middle;
+  position: absolute;
+  transform: translateX(20%) translateY(15%);
+}
+
+.userAcnt {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.userAcntDetail {
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+}
+
+.acntDetail {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  margin-left: 20%;
+  justify-content: center;
+}
+
+.acntFollow {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095f6;
+  width: 45px;
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  right: 7px;
 }
