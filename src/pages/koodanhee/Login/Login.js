@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from 'react';
+import React, { useState /* , useEffect  */ } from 'react';
 import './Login.scss';
 import { useNavigate } from 'react-router-dom';
-import { keyboard } from '@testing-library/user-event/dist/keyboard';
 
 function Login() {
   const [idValue, setIdValue] = useState('');
