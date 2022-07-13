@@ -21,6 +21,27 @@ const Login = () => {
       : setDisabled(true);
   };
 
+  // console.log(localStorage.getItem('login-token'));
+
+  const goToBackEnd = () => {
+    fetch('http://10.58.6.78:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: loginId,
+        password: loginPW,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === 'SUCCESS') {
+          localStorage.setItem('login-token', result.token);
+          goToMain();
+        } else {
+          alert('가입 안 하신듯?');
+        }
+      });
+  };
+
   return (
     <div>
       <main className="loginPage">
@@ -43,10 +64,10 @@ const Login = () => {
                 placeholder="비밀번호"
               />
               <button
-                onClick={goToMain}
+                onClick={goToBackEnd}
                 className={disabled ? 'loginConfirm' : 'loginConfirm_pass'}
                 disabled={disabled}
-                type="submit"
+                type="button"
               >
                 로그인
               </button>
@@ -77,7 +98,10 @@ const Login = () => {
           </div>
           <form className="joinMember">
             <button className="goMembershipJoin">
-              계정이 없으신가요? <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
+              계정이 없으신가요?{' '}
+              <a href="https://www.instagram.com/accounts/emailsignup/">
+                가입하기
+              </a>
             </button>
           </form>
         </div>
