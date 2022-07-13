@@ -1,5 +1,6 @@
-import './Main.scss';
-import Comments from '../../components/Comments';
+import "./Main.scss";
+import { useState } from "react";
+import Comments from "../../components/Comments";
 
 const Story = () => {
   return (
@@ -29,7 +30,7 @@ const Feed = () => {
       <div className="feed-header">
         <div className="profile-feed-section">
           <img
-            src="../.images/profile.jpg"
+            src="images/profile.jpg"
             id="profile-icon-feed"
             alt="프로필사진"
           />
@@ -70,7 +71,7 @@ const Feed = () => {
         </div>
       </div>
       <div className="feed-contents-section">
-        <a className="userOfFeed">dongkyusim</a>강릉앞바다{' '}
+        <a className="userOfFeed">dongkyusim</a>강릉앞바다{" "}
         <a id="more">더 보기</a>
       </div>
       <Comments />
