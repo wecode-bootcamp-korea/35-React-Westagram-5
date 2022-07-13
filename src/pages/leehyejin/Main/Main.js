@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import './Main.scss';
+import Comment from '../../../components/Comment/Comment';
 
 const Main = () => {
-  //   const navigate = useNavigate();
-
-  //   const goToLogin = () => {
-  //     navigate('/login-leehyejin');
-  //   };
   const [input, setInput] = useState('');
   const [comment, setComment] = useState([]);
 

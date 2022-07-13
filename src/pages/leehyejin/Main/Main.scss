@@ -194,7 +194,7 @@ $backgroundColor: #fff;
   align-items: stretch;
   align-content: stretch;
   width: 520px;
-  height: 750px;
+  height: auto;
   border: 1px solid $borderColor;
   border-radius: 8px;
   margin-top: 150px;
@@ -266,9 +266,27 @@ $backgroundColor: #fff;
 
 .cmtContainer {
   width: 490px;
-  height: 80px;
+  // height: 80px;
   margin-top: 10px;
   margin-left: 10px;
+}
+.comment-container {
+  flex-wrap: wrap;
+  width: 470px;
+  height: auto;
+  padding-left: 15px;
+  font-size: 14px;
+
+  .userOfComment {
+    padding: 0 5px 5px 0;
+    font-size: 14px;
+    font-weight: 650;
+  }
+
+  .commentOfUser {
+    padding: 0 5px 5px 0;
+    width: 353px;
+  }
 }
 
 .cmtTime {
@@ -287,7 +305,7 @@ $backgroundColor: #fff;
 }
 
 .comment {
-  height: 30px;
+  // height: 30px;
   margin-top: 2%;
 }
 .emojiIcon {
