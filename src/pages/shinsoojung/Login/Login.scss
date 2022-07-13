@@ -1,4 +1,167 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@charset "utf-8";
+@import '../../../styles/reset.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/variable.scss';
+
+/*login start*/
+
+
+body {
+  font-family: 'Gothic A1', sans-serif;
+  width: 100vw;
+  background-color: $bg-color;
+  color: #333;
 }
+
+
+main.loginPage {
+  height: 100vh;
+  @include flex-center;
+
+  .loginBox {
+    background-color: $bg-color;
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  .inputBox {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #e1e1e1;
+    background-color: $bgbox-color;
+  }
+
+}
+
+h1.logo {
+  color: black;
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive, serif;
+  font-size: 3.2em;
+  padding-top: 40px;
+}
+
+form.inputIdPw {
+  @include flex-center;
+  flex-direction: column;
+  margin-top: 50px;
+
+
+  .loginId,
+  .loginPw {
+    width: 280px;
+    height: 48px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: $bg-color;
+    border: #e1e1e1 1px solid;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  .loginConfirm {
+    width: 280px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: $point-color;
+    opacity: 0.5;
+    border: #e1e1e1 1px solid;
+    border-radius: 3px;
+    color: $bgbox-color;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .loginConfirm_pass {
+    width: 280px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: $point-color;
+    border: #e1e1e1 1px solid;
+    border-radius: 3px;
+    color: $bgbox-color;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  div.orLine {
+    width: 280px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .or {
+      display: flex;
+      font-size: 0.8em;
+      color: rgb(145, 145, 145);
+      margin: 0 10px;
+    }
+
+    .line {
+      height: 1px;
+      flex-grow: 1;
+      background-color: rgb(193, 193, 193);
+    }
+
+  }
+
+
+  div.tryLoginFB {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .facebookLogin {
+      display: flex;
+
+      .facebookicon {
+        width: 17px;
+        margin-right: 5px;
+      }
+
+      .facebookLoginText {
+        color: rgb(62, 79, 129);
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+
+    }
+
+    .findPw {
+      font-size: 0.85em;
+      color: rgb(62, 79, 129);
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+  }
+
+
+
+}
+
+form.joinMember {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 400px;
+  height: 80px;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  background-color: $bgbox-color;
+
+  .goMembershipJoin {
+    color: #1d1d1d;
+    font-size: 0.85em;
+
+    a {
+      color: $point-color;
+      font-weight: 600;
+    }
+
+  }
+
+}
+
+/*login end*/

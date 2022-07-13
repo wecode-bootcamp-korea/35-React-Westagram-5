@@ -16,7 +16,7 @@ const Nav = () => {
             fill="#8e8e8e"
             height="16"
             role="img"
-            viewBox="0 0 24 24"
+            viewBox="0 0 24 24npm"
             width="16"
           >
             <path

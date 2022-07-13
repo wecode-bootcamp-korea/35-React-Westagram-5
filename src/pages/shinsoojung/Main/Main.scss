@@ -1,4 +1,184 @@
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+@charset "utf-8";
+@import '../../../styles/reset.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/variable.scss';
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  background-color: $bgbox-color;
+  z-index: 1;
+
+  .homeNavBox {
+    @include flex-center;
+    width: 100vw;
+    height: 80px;
+
+    h2.logoSmall {
+      margin: 0 250px 0 40px;
+      color: black;
+      font-family: 'Berkshire Swash', cursive, serif;
+      font-size: 1.7em;
+    }
+
+    div.searchBar {
+      position: relative;
+      margin-right: 100px;
+
+      .searchIcon {
+        position: absolute;
+        top: 5px;
+        left: 6px;
+        width: 20px;
+        margin: 0 3px;
+      }
+
+      .inputSearch {
+        width: 200px;
+        height: 30px;
+        padding-left: 30px;
+        background-color: $bg-color;
+        border-radius: 5px;
+        border: 1px solid #eee;
+      }
+    }
+
+    div.navIcon {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+
+      img {
+        width: 30px;
+        margin-right: 15px;
+      }
+
+      #navProfileIcon {
+        width: 30px;
+        border-radius: 50%;
+        border: 2px solid #e1e1e1;
+      }
+    }
+  }
 }
+
+/*main start*/
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: $bg-color;
+
+  /* section start */
+
+  section.feedScrollArea {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*section end*/
+
+  /* aside start */
+
+  aside {
+    width: 320px;
+
+    li.asideMyProfileBox {
+      @include flex-space-between;
+      align-items: center;
+      margin-top: 60px;
+
+      .asideMyProfile {
+        display: flex;
+        align-items: center;
+
+        .asideMyProfileImg {
+          margin-right: 10px;
+
+          img {
+            width: 70px;
+            border-radius: 50%;
+            border: 5px solid #e1e1e1;
+          }
+        }
+
+        .asideFeedMyProfileName {
+          font-size: 1.2em;
+          font-weight: 600;
+          margin-left: 5px;
+        }
+
+        .asideFeedMyProfileSubName {
+          font-size: 0.9em;
+          font-weight: 300;
+          color: #777;
+        }
+      }
+
+      .asideMyIdRetrun {
+        font-size: 0.9em;
+        color: $point-color;
+      }
+    }
+
+    li.recommandListTitle {
+      @include flex-space-between;
+      margin: 20px 0;
+    }
+
+    li.recommandPeopleBox {
+      @include flex-space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      div.recommandPeopleList {
+        display: flex;
+
+        .recommendProfileIcon {
+          img {
+            width: 40px;
+            border-radius: 50%;
+            border: 2px solid #e1e1e1;
+          }
+        }
+
+        .recommendProfileName {
+          font-size: 1em;
+          font-weight: 600;
+          margin-left: 10px;
+        }
+
+        .recommendProfileSubName {
+          font-weight: 300;
+          opacity: 0.8;
+        }
+      }
+
+      div.recommendPeopleFollow {
+        font-size: 0.9em;
+        color: $point-color;
+      }
+    }
+
+    ul.systemNotices {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      font-size: 1em;
+      color: $basic-font-color;
+      opacity: 0.5;
+
+      li {
+        padding-right: 6px;
+        line-height: 1.5em;
+      }
+    }
+  }
+
+  /*aside end*/
+}
+
+/*main end*/
