@@ -1,42 +1,52 @@
-import { useState } from "react";
-import Acomment from "./Acomment";
-let id = 1;
+import { useState } from 'react';
+import Acomment from './Acomment';
 
-const Comments = () => {
+let id = 4;
+let user = 'hyunjoo.326';
+
+const Comments = ({ time }) => {
   const [onButton, setOnbutton] = useState(true);
   const [cmntList, setCmntList] = useState([]);
-  let cmnt = "";
+  let cmnt = '';
 
-  const checkItIsBlank = (e) => {
+  const checkItIsBlank = e => {
     let thisCmnt = e.target.value;
     thisCmnt.length > 0 && !!thisCmnt.trim()
       ? setOnbutton(false)
       : setOnbutton(true);
   };
 
-  const createCmnt = (e) => {
+  const createCmnt = e => {
     e.preventDefault();
     cmnt = e.target.text.value;
-    setCmntList([...cmntList, { id: id, contents: cmnt }]);
-    e.target.text.value = "";
+    setCmntList([...cmntList, { id: id, user: user, contents: cmnt }]);
+    e.target.text.value = '';
     setOnbutton(true);
     id++;
+  };
+
+  const deleteCmnt = i => {
+    setCmntList(
+      cmntList.filter(object => {
+        return object.id !== i;
+      })
+    );
   };
 
   return (
     <>
       <div className="feed-comment">
-        {cmntList.map((object) => (
-          <Acomment cmntList={object} key={object.id} />
+        {cmntList.map(cmnt => (
+          <Acomment cmnt={cmnt} deleteCmnt={deleteCmnt} key={cmnt.id} />
         ))}
       </div>
-      <div className="feed-time">1시간 전</div>
+      <div className="feed-time">{time}</div>
       <form
         className="feed-comment-box-section"
-        onSubmit={(e) => {
+        onSubmit={e => {
           createCmnt(e);
         }}
-        onChange={(e) => {
+        onChange={e => {
           checkItIsBlank(e);
         }}
       >

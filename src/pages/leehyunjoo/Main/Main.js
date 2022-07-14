@@ -68,7 +68,7 @@ const Feed = () => {
         />
         <div className="feed-like-text">
           <a className="userOfFeed" id="inlike">
-            _jooooo12
+            _jo0o12
           </a>
           님 외 <a className="userInLikeOfFeed">765명</a>이 좋아합니다
         </div>
