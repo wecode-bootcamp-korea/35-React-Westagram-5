@@ -211,17 +211,17 @@ $background-color: #fafafa;
               }
 
               #like {
-                background-image: url(../../assets/images/insta.png);
+                background-image: url(../../../assets/images/insta.png);
                 background-position: -26px 101px;
               }
 
               #reply {
-                background-image: url(../../assets/images/insta.png);
+                background-image: url(../../../assets/images/insta.png);
                 background-position: -58px 100px;
               }
 
               #dm {
-                background-image: url(../../assets/images/insta.png);
+                background-image: url(../../../assets/images/insta.png);
                 background-position: -89px 101px;
               }
             }
@@ -235,7 +235,7 @@ $background-color: #fafafa;
                 height: 30px;
                 padding: 8px;
                 margin-right: 10px;
-                background-image: url(../../assets/images/insta.png);
+                background-image: url(../../../assets/images/insta.png);
                 background-position: -120px 101px;
               }
             }
@@ -305,7 +305,7 @@ $background-color: #fafafa;
                 height: 12px;
                 margin: 2px;
                 background-size: cover;
-                background-image: url(../../../public/images/love.png);
+                background-image: url(../../../assets/images/liked.png);
 
                 &:hover {
                   cursor: pointer;
@@ -317,7 +317,7 @@ $background-color: #fafafa;
                 height: 12px;
                 margin: 2px;
                 background-size: cover;
-                background-image: url(../../../public/images/delete.png);
+                background-image: url(../../../assets/images/delete.png);
 
                 &:hover {
                   cursor: pointer;

@@ -1,7 +1,6 @@
 import './Login.scss';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { render } from '@testing-library/react';
 
 function Form() {
   const [id, setId] = useState('');

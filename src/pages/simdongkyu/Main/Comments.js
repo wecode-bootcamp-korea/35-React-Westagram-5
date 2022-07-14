@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import love from '../assets/images/love.png';
-import liked from '../assets/images/liked.png';
+import love from '../../../assets/images/love.png';
+import liked from '../../../assets/images/liked.png';
 let id = 1;
 
 const Comments = () => {

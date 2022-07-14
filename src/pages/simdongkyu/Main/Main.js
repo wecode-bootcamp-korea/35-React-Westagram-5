@@ -1,5 +1,5 @@
 import './Main.scss';
-import Comments from '../../components/Comments';
+import Comments from './Comments';
 
 const Story = () => {
   return (
