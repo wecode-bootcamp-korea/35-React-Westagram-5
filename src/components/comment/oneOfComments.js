@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const OneOfComments = props => {
-  // const [like, setLike] = useState(emptyheart);
+const OneOfComments = ({ cmtList }) => {
+  const [like, setLike] = useState();
   return (
     <div className="comment-box">
       <span className="useId">good_ani</span>
-      <span className="userCmt">{props.cmtList?.contents}</span>
+      <span className="userCmt">{cmtList?.contents}</span>
       <span
         className="likeUp"
         onClick={() => {
@@ -13,7 +13,7 @@ const OneOfComments = props => {
         }}
       />
       <span className="likeUp" />
-      {/* <img alt="" src={emptyheart} onClick={redheart} /> */}
+      {/* {<img alt="" src={emptyheart} onClick={redheart} />} */}
       <span className="deleteCmt" />
     </div>
   );
