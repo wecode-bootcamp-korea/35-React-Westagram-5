@@ -48,7 +48,7 @@ const Main = () => {
                       alt="profile_image"
                       src="images/koodanhee/Main/profile.jpg"
                     />
-                    <a href="">good_ani</a>
+                    <a href="https://www.instagram.com">good_ani</a>
                   </div>
                   <div className="icon-image">
                     <img

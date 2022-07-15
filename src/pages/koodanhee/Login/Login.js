@@ -52,7 +52,7 @@ function Login() {
               로그인
             </button>
           </form>
-          <a href="" className="findPW">
+          <a href="https://www.instagram.com" className="findPW">
             비밀번호를 잊으셨나요?
           </a>
         </div>
