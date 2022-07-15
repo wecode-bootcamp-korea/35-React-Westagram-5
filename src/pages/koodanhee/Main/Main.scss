@@ -121,24 +121,15 @@ article {
   margin-top: 30px;
 }
 
-.parent-comment-box {
+.comment-box {
   margin-top: 30px;
   justify-content: space-between;
-}
-
-.comment-box {
   font-family: 'Gothic A1', sans-serif;
   border: none;
   width: 430px;
   height: 30px;
 }
 
-.comment-up {
-  font-family: 'Gothic A1', sans-serif;
-  border: none;
-  color: RGB(1, 149, 247);
-  background-color: inherit;
-}
 .useId {
   padding-left: 25px;
   padding-right: 10px;
@@ -151,6 +142,7 @@ article {
 
 .MainButton-on {
   color: RGB(1, 149, 247);
+  background-color: white;
   opacity: 0.3;
   border: none;
   border-radius: 6px;

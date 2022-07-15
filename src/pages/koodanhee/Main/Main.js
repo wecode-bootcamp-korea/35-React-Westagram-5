@@ -26,7 +26,7 @@ const Main = () => {
     e.preventDefault();
     const comment = {
       id: id,
-      name: 'danhee',
+      name: 'good_ani',
       content: commentData,
     };
     setCommentList([...commentList, comment]);
@@ -98,12 +98,12 @@ const Main = () => {
 
               <form action="submit" onSubmit={addComment}>
                 <input
-                  className=""
+                  className="comment-box"
                   type="text"
                   onChange={addCommentData}
                   value={commentData}
                 />
-                <button>게시</button>
+                <button className="MainButton-on">게시</button>
               </form>
             </div>
           </article>
